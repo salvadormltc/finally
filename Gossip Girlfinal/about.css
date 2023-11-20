@@ -1,0 +1,24 @@
+.forum2 {
+    margin-left: 20px; /* Ajusta a margem esquerda dos posts */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+   
+  }
+  
+  .post2 {
+    background-color: #fff;
+    padding: 40px;
+    
+    
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .author {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #888;
+  }

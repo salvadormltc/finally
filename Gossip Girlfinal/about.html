@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fórum de Fofocas</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <header>
+    <h1><b>Gossip Boy</b></h1>
+    <nav>
+      <ul>
+        <li><a style ="font-weight: bold"href="login.html">Login</a></li>
+        
+        <li><a style ="font-weight: bold"href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+
+      <div class="left-sidebar">
+        <h2>Nova Iorque</h2>
+        <img  src="Images/beautiful-vertical-shot-buildings-new-york-city_181624-47589.avif">
+        <p id="new-york-time">Hora local: Carregando...</p>
+        <a href="mailto:gossipboyinsiders@gmail.com?subject=Nova%20Fofoca" target="_blank">Enviar-me fofoca</a>
+        <!-- Adicione informações adicionais, se necessário -->
+      </div>
+  
+      
+
+      
+        <div class="forum">
+       
+        
+          <div class="forum2">
+            
+            <div class="post2" data-tipo="publico">
+              <p>Salutations, my captivating Lisbon Insiders,
+
+                Secrets, ah, the currency of our clandestine world! While some guard them under lock and key, your devoted Gossip Boy thrives on their unraveling, revealing the inner workings of our entangled lives. After all, what is life without the thrill of a well-kept secret unfurling like a forbidden tale?
+                
+                Welcome, dear readers, to the sanctum of gossip, where every whisper finds a home. Here, nestled amidst the bustling lives of Lisbon's elite, you'll find your tales—some whispered in the shadows, others unveiled in the spotlight.
+                For in this realm, your most private moments might find their way to this illustrious page.
+                
+                Delight in the allure of shared secrets, for it is in these confidences that our world finds its fervor, its pulse. Stay vigilant, dear Insiders, for this is just the opening of the symphony that awaits you. The whispers may dance around your thoughts, fluttering like elusive butterflies in the garden of our minds. Some secrets, shrouded in enigmas, may attract your curiosity, while others, boldly released, may redefine the very fabric of our perceptions.
+                <br>
+
+                Oh, how fascinating is the interconnected web of tales woven by our beloved society! Here the clandestine meeting, the clandestine whispers of desire and the unspoken truths converge. Every page turned, every word spoken, every secret uncovered adds a melody to our collective narrative.
+
+                Dear readers, embrace the emotion, savor the fascination, for in these secrets lies the pulse of our existence, the enigmatic rhythm of our intertwined lives.
+                
+                
+                Indulge in the allure of shared secrets, for it's within these confidences that our world finds its fervor, its heartbeat. Stay vigilant, dear Insiders, as this is merely the overture of the symphony that awaits.
+                <br>
+                <br>
+                You know you love me,
+                
+              </p>
+              <span class="author">XOXO Gossip Boy</span>
+              <span class="hora">20:00 20/11/2023</span>
+            </div>
+          </div>
+        </div>
+
+    
+  </main>
+
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+<script>
+ function getNewYorkTime() {
+      const newYorkTimeElement = document.getElementById('new-york-time');
+
+      // Obter a data atual de Nova Iorque
+      const now = new Date();
+      const newYorkTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+
+      // Formatar a hora e mostrar no elemento HTML
+      const options = { hour: 'numeric', minute: 'numeric', hour12: true };
+      const formattedTime = newYorkTime.toLocaleString('en-US', options);
+      newYorkTimeElement.textContent = `Hora local: ${formattedTime}`;
+    }
+
+    // Atualizar a hora de Nova Iorque a cada segundo
+    setInterval(getNewYorkTime, 1000);
+
+    // Chamar a função assim que a página for carregada
+    window.onload = getNewYorkTime;
+</script>

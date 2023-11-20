@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Gossip Boy</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<header>
+    <h1><b>Gossip Boy</b></h1>
+    <nav>
+        <ul>
+            <li><a style ="font-weight: bold"href="index.html">Home</a></li>
+            <li><a style ="font-weight: bold"href="registo.html">Registo</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <form id="loginForm" class="form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="loginEmail">Email:</label>
+                <input type="emai
+        
+        l" id="loginEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Obter os dados do usuário do localStorage
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+    const storedName = localStorage.getItem('userName');
+
+    // Verificar se as credenciais estão corretas
+    if (email === storedEmail && password === storedPassword) {
+        // Salvar o estado de login no localStorage
+        localStorage.setItem('isLoggedIn', 'true');
+
+        // Redirecionar para a página Home
+        window.location.href = 'index.html';
+    } else {
+        alert('Credenciais inválidas.');
+    }
+});
+</script>
